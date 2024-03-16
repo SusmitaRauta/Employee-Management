@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block title %}Insert Employee Records{% endblock %}
+{% block body %}
+    <form method="post" action="{% url 'insert' %}">
+    {% csrf_token %}
+            <div  class="form-group">
+                <label>Eid</label>
+                <input type="number" name="eid" placeholder="Enter emp id">
+            </div>
+            <div>
+                <label>Ename</label>
+                <input type="text" name="ename" placeholder="Enter emp name">
+            </div>
+            <div>
+                <label>Salary</label>
+                <input type="number" name="salary" placeholder="Enter emp salary">
+            </div>
+            <div>
+                <label>Gender</label>
+                <input type="text" name="gender" placeholder="Enter emp gender">
+            </div>
+            <div>
+                <label>Deptno</label>
+                <input type="number" name="deptno" placeholder="Enter emp deptno">
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+{% endblock %}

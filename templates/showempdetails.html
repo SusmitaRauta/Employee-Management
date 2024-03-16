@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Emp Details{% endblock %}
+{% block body %}
+    <table class="table table-striped">
+            <tr>
+                <th>Eid:</th>
+                <th>Ename:</th>
+                <th>Salary:</th>
+                <th>Gender:</th>
+                <th>Deptno:</th>
+            </tr>
+    {% for rec in emprecs %}
+    <tr>
+        <td>{{ rec.eid }}</td>
+        <td>{{ rec.ename }}</td>
+        <td>{{ rec.salary }}</td>
+        <td>{{ rec.gender }}</td>
+        <td>{{ rec.deptno }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

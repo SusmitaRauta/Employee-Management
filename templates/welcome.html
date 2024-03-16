@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Welcome{% endblock %}
+{% block body %}
+
+    <h1 style="color: red; text-align: center;">Welcome To Employee Management System</h1>
+    <div style="text-align: center;">
+        <h2 style="color:cadetblue; font-family: Georgia, sans-serif; font-size: 24px; display: inline-block; margin-right: 20px;"><a href="{% url 'showemp' %}">Emp Details</a></h2>
+        <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 24px; display: inline-block;"><a href="{% url 'insert' %}">Insert emprecs</a></h2>
+    </div>
+    <!-- <h2 style="text-align: center;"><a href="{% url 'empinsert' %}">Insert Emprecs (cbv)</a></h2> -->
+
+{% endblock %}

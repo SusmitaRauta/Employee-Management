@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<div class="topnav">
+    <a class="active" href="{% url 'welcome' %}">Home</a>
+    <a class="active" href="#">Contact</a>
+    <div class="topnav-right">
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'signup' %}">Signup</a>
+        <a href="{% url 'logout' %}">LogOut</a>
+    </div>
+</div>
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>

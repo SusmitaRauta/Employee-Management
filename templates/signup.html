@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}signupForm{% endblock %}
+{% block body %}
+<form  method="post" action="{% url 'signup' %}">
+    {% csrf_token %}
+    <div class="form-group">
+    <label>First Name:</label>
+        {{ form.first_name }}
+        {{ form.first_name.errors}}
+    </div>
+    <div class="form-group">
+    <label>Last Name:</label>
+        {{ form.last_name}}
+        {{ form.last_name.errors }}
+    </div>
+    <div class="form-group">
+    <label>Email:</label>
+        {{ form.email }}
+        {{ form.email.errors }}
+    </div>
+    <div class="form-group">
+    <label>Password:</label>
+        {{ form.password}}
+        {{ form.password.errors}}
+    </div>
+        <div class="form-group">
+    <label>Confirm Password:</label>
+        {{ form.confirmpwd }}
+            {{ form.confirmpwd.errors }}
+    </div>
+
+    <div class="form-group">
+    <label>Phone Number:</label>
+        {{ form.phone }}
+        {{ form.phone.errors}}
+    </div>
+    <button type="submit" class="btn btn-primary">Signup</button>
+</form>
+{% endblock %}
