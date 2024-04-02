@@ -1,3 +1,8 @@
 *.Python linguist-detectable=true
 *.Django linguist-detectable=true
 *.HTML linguist-detectable=true
+*.C linguist-detectable=false
+*.PowerShell linguist-detectable=false
+
+
+
