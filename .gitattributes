@@ -1,0 +1,3 @@
+*.Python linguist-detectable=true
+*.Django linguist-detectable=true
+*.HTML linguist-detectable=true
